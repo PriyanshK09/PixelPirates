@@ -1,0 +1,269 @@
+.App {
+  text-align: center;
+  padding-top: 70px; /* Adjusting for fixed navbar */
+  padding-left: 15px; /* Added padding to prevent elements from sticking to the left */
+  padding-right: 15px; /* Added padding to prevent elements from sticking to the right */
+}
+
+/* Header Styles */
+.header {
+  padding: 20px 0;
+  background-color: var(--background-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px; /* Added padding to the container */
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brand h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.professional-partner {
+  font-size: 12px;
+  background-color: #1a73e8;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-left: 10px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right ul {
+  display: flex;
+  list-style: none;
+  margin-right: 20px;
+  padding-left: 0; /* Remove padding from ul */
+}
+
+.header-right ul li {
+  margin-left: 30px;
+}
+
+.header-right ul li a {
+  font-weight: 500;
+}
+
+.hire-me {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Hero Styles */
+.hero,
+.services,
+.portfolio,
+.process,
+.testimonials {
+  padding: 80px 15px; /* Added padding to prevent sticking to the sides */
+  animation: fadeIn 1s ease-out;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta-buttons {
+  margin-bottom: 30px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: 500;
+  margin: 0 10px;
+}
+
+.primary-btn {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+}
+
+/* Common section styles */
+.services h2,
+.portfolio h2,
+.process h2,
+.testimonials h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Footer Styles */
+.footer {
+  padding: 40px 15px; /* Added padding to prevent sticking to the sides */
+  background-color: var(--secondary-color);
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px; /* Added padding to the container */
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.footer-links a {
+  margin-left: 20px;
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.scroll-to-top:hover {
+  background-color: #0052CC;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header .container {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .header-right {
+      margin-top: 20px;
+      width: 100%;
+      justify-content: space-between;
+  }
+
+  .header-right ul {
+      flex-wrap: wrap;
+      margin-right: 0;
+  }
+
+  .header-right ul li {
+      margin: 5px 15px 5px 0;
+  }
+
+  .hire-me {
+      margin-top: 15px;
+  }
+
+  .hero h1 {
+      font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-right {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .cta-buttons {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+      margin: 10px 0;
+  }
+
+  .footer .container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footer-links {
+      margin-top: 20px;
+  }
+
+  .footer-links a {
+      display: block;
+      margin: 10px 0;
+  }
+}
+
+/* Hover Effects */
+.nav ul li a:hover,
+.footer-links a:hover {
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.hire-me:hover,
+.primary-btn:hover {
+  background-color: #0052CC;
+  transition: background-color 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}

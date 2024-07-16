@@ -1,0 +1,48 @@
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.button.primary {
+    background-color: #00ff00;
+    color: #000;
+}
+
+.button.outline {
+    background-color: transparent;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+}
+
+.button-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.button:hover .button-hover {
+    transform: translateX(0);
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.2);
+}
+
+.button.outline:hover {
+    background-color: #00ff00;
+    color: #000;
+}

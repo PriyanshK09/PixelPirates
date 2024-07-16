@@ -1,0 +1,129 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, padding 0.3s;
+}
+
+.navbar.scrolled {
+    background-color: rgba(17, 17, 17, 0.95);
+    padding: 15px 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    transition: color 0.3s;
+}
+
+.navbar-box {
+    background-color: rgba(27, 26, 26, 0.8);
+    padding: 10px 20px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 10px 15px;
+}
+
+.navbar-links a:hover {
+    color: #00ff00;
+}
+
+.navbar-hire {
+    padding: 12px 24px;
+    background-color: #00ff00;
+    color: #000;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navbar-hire:hover {
+    background-color: #00cc00;
+    transform: translateY(-2px);
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .navbar-box {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(16, 16, 16, 0.95);
+        padding: 20px;
+        display: none;
+    }
+
+    .navbar.menu-open .navbar-box {
+        display: block;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .navbar-hire {
+        display: none;
+    }
+
+    .navbar.menu-open .navbar-toggle span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .navbar.menu-open .navbar-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar.menu-open .navbar-toggle span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}

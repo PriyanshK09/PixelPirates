@@ -1,0 +1,106 @@
+.portfolio {
+    padding: 100px 40px;
+    background-color: #111;
+    text-align: center;
+    color: #ffffff;
+}
+
+.portfolio h2 {
+    font-size: 42px;
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.portfolio h2:after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background-color: #00ff00;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.portfolio-item {
+    background-color: #222;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.portfolio-item:hover .portfolio-item-overlay {
+    opacity: 1;
+}
+
+.portfolio-item-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.portfolio-item-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #00ff00;
+}
+
+.portfolio-item-content p {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .portfolio {
+        padding: 60px 20px;
+    }
+
+    .portfolio h2 {
+        font-size: 32px;
+    }
+
+    .portfolio-gallery {
+        grid-template-columns: 1fr;
+    }
+}

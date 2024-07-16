@@ -1,0 +1,92 @@
+.services {
+    padding: 100px 40px;
+    background-color: #1a1a1a;
+    text-align: center;
+    color: #ffffff;
+}
+
+.services h2 {
+    font-size: 42px;
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+}
+
+.services h2:after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background-color: #00ff00;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    background-color: #222;
+    padding: 40px 30px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 255, 0, 0.1);
+}
+
+.service-icon {
+    font-size: 48px;
+    color: #00ff00;
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.service-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #bbb;
+}
+
+.service-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(0, 255, 0, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+}
+
+.service-item:hover::before {
+    transform: translateX(100%);
+}
+
+@media (max-width: 768px) {
+    .services {
+        padding: 60px 20px;
+    }
+
+    .services h2 {
+        font-size: 36px;
+    }
+
+    .services-list {
+        grid-template-columns: 1fr;
+    }
+}
