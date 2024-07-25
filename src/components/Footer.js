@@ -12,6 +12,15 @@ const Footer = () => {
           <a href="https://www.instagram.com/mrpriyanshuniverse/" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
           <a href="https://www.linkedin.com/in/priyanshk09/" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
         </div>
+        <div className="contact-form">
+          <h3>Contact Us</h3>
+          <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
       </div>
     </footer>
   );

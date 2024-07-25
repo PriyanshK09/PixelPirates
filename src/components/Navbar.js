@@ -15,7 +15,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''} ${isMenuOpen ? 'menu-open' : ''}`}>
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''} ${isMenuOpen ? 'menu-open' : ''}`} aria-label="Main navigation">
       <div className="navbar-logo">Logo</div>
       <div className="navbar-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
         <span></span>

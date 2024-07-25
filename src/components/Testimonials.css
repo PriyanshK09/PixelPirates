@@ -1,0 +1,150 @@
+.testimonials {
+    padding: 100px 40px;
+    background-color: #0a0a0a;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .testimonials h2 {
+    font-size: 3rem;
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .testimonials h2:after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background-color: #00ff00;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .testimonial-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .testimonial-item {
+    background-color: #1a1a1a;
+    padding: 40px 30px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 255, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .testimonial-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 255, 0, 0.2);
+  }
+  
+  .testimonial-content {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .quote-icon {
+    color: #00ff00;
+    font-size: 24px;
+    opacity: 0.5;
+  }
+  
+  .quote-icon.left {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+  }
+  
+  .quote-icon.right {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+  }
+  
+  .testimonial-quote {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ddd;
+    margin: 20px 0;
+  }
+  
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .testimonial-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 3px solid #00ff00;
+  }
+  
+  .author-info {
+    text-align: left;
+  }
+  
+  .testimonial-name {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: #00ff00;
+  }
+  
+  .testimonial-position {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  .slick-dots {
+    bottom: -40px;
+  }
+  
+  .slick-dots li button:before {
+    color: #00ff00;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #00ff00;
+  }
+  
+  @media (max-width: 768px) {
+    .testimonials {
+      padding: 60px 20px;
+    }
+  
+    .testimonials h2 {
+      font-size: 2.5rem;
+    }
+  
+    .testimonial-item {
+      padding: 30px 20px;
+    }
+  
+    .testimonial-quote {
+      font-size: 1rem;
+    }
+  
+    .testimonial-image {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .testimonial-name {
+      font-size: 1.1rem;
+    }
+  
+    .testimonial-position {
+      font-size: 0.8rem;
+    }
+  }

@@ -37,6 +37,43 @@
     transform: translateY(-3px);
 }
 
+.contact-form {
+    margin-top: 20px;
+}
+
+.contact-form h3 {
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #00cc00;
+}
+
+
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;
