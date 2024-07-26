@@ -47,26 +47,29 @@ const Testimonials = () => {
 
   return (
     <section className="testimonials" id="testimonials">
-      <h2 data-aos="fade-up">Client Success Stories</h2>
-      <div className="testimonial-container">
-        <Slider {...settings}>
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="testimonial-item" data-aos="fade-up">
-              <div className="testimonial-content">
-                <FaQuoteLeft className="quote-icon left" />
-                <p className="testimonial-quote">{testimonial.quote}</p>
-                <FaQuoteRight className="quote-icon right" />
-              </div>
-              <div className="testimonial-author">
-                <img src={testimonial.image} alt={testimonial.name} className="testimonial-image" />
-                <div className="author-info">
-                  <h3 className="testimonial-name">{testimonial.name}</h3>
-                  <p className="testimonial-position">{testimonial.position}</p>
+      <div className="testimonials-overlay"></div>
+      <div className="testimonials-content">
+        <h2>Client Success Stories</h2>
+        <div className="testimonial-container">
+          <Slider {...settings}>
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="testimonial-item">
+                <div className="testimonial-content">
+                  <FaQuoteLeft className="quote-icon left" aria-hidden="true" />
+                  <p className="testimonial-quote">{testimonial.quote}</p>
+                  <FaQuoteRight className="quote-icon right" aria-hidden="true" />
+                </div>
+                <div className="testimonial-author">
+                  <img src={testimonial.image} alt={`${testimonial.name}`} className="testimonial-image" />
+                  <div className="author-info">
+                    <h3 className="testimonial-name">{testimonial.name}</h3>
+                    <p className="testimonial-position">{testimonial.position}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        </div>
       </div>
     </section>
   );
