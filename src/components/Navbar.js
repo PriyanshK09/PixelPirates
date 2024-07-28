@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -9,14 +10,13 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''} ${isMenuOpen ? 'menu-open' : ''}`} aria-label="Main navigation">
-      <div className="navbar-logo">Logo</div>
+      <Link to="/" className="navbar-logo">Logo</Link>
       <div className="navbar-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
         <span></span>
         <span></span>
@@ -24,13 +24,13 @@ const Navbar = () => {
       </div>
       <div className="navbar-box">
         <ul className="navbar-links">
-          <li><a href="#work" onClick={() => setIsMenuOpen(false)}>Work</a></li>
-          <li><a href="#capabilities" onClick={() => setIsMenuOpen(false)}>Capabilities</a></li>
-          <li><a href="#process" onClick={() => setIsMenuOpen(false)}>Process</a></li>
-          <li><a href="#testimonials" onClick={() => setIsMenuOpen(false)}>Testimonials</a></li>
+          <li><Link to="/#work" onClick={() => setIsMenuOpen(false)}>Work</Link></li>
+          <li><Link to="/#capabilities" onClick={() => setIsMenuOpen(false)}>Capabilities</Link></li>
+          <li><Link to="/#process" onClick={() => setIsMenuOpen(false)}>Process</Link></li>
+          <li><Link to="/#testimonials" onClick={() => setIsMenuOpen(false)}>Testimonials</Link></li>
         </ul>
       </div>
-      <a href="#hire-me" className="navbar-hire" onClick={() => setIsMenuOpen(false)}>Hire Us</a>
+      <Link to="/hire-us" className="navbar-hire" onClick={() => setIsMenuOpen(false)}>Hire Us</Link>
     </nav>
   );
 }

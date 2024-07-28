@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Button from './Button';
 import './Hero.css';
 
@@ -23,8 +24,12 @@ const Hero = () => {
         </h1>
         <p className="tagline">Crafting Pixel Perfect Web Experiences</p>
         <div className="hero-buttons">
-          <Button text="Work with us" link="#work" />
-          <Button text="See our work" link="#work" />
+          <Link to="/hire-us">
+            <Button text="Work with us" />
+          </Link>
+          <Link to="/#work">
+            <Button text="See our work" />
+          </Link>
         </div>
       </div>
     </section>

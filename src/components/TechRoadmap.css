@@ -1,0 +1,119 @@
+.tech-roadmap {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/src/assets/bg.png') no-repeat center center;
+  background-size: cover;
+  color: #ffffff;
+  padding: 60px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-roadmap h2 {
+  font-family: "Tiny5", sans-serif;
+  font-size: 48px;
+  color: #00ff00;
+  text-align: center;
+  margin-bottom: 40px;
+  text-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { text-shadow: 0 0 20px rgba(0, 255, 0, 0.5); }
+  50% { text-shadow: 0 0 40px rgba(0, 255, 0, 0.8); }
+  100% { text-shadow: 0 0 20px rgba(0, 255, 0, 0.5); }
+}
+
+.roadmap-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.year-column {
+  flex: 1;
+  padding: 20px;
+  background: rgba(34, 34, 34, 0.8);
+  border-radius: 15px;
+  margin: 0 10px;
+  transition: all 0.5s ease;
+  opacity: 0.7;
+  transform: scale(0.95);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
+}
+
+.year-column.active {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+}
+
+.year-column h3 {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 28px;
+  color: #00ff00;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tech-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tech-item {
+  background: rgba(0, 255, 0, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+.tech-item:hover {
+  background: rgba(0, 255, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 255, 0, 0.2);
+}
+
+.tech-item h4 {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 20px;
+  color: #00ff00;
+  margin-bottom: 10px;
+}
+
+.tech-item p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #bbb;
+}
+
+@media (max-width: 768px) {
+  .roadmap-container {
+    flex-direction: column;
+  }
+
+  .year-column {
+    margin-bottom: 20px;
+  }
+
+  .tech-roadmap h2 {
+    font-size: 36px;
+  }
+
+  .year-column h3 {
+    font-size: 24px;
+  }
+
+  .tech-item h4 {
+    font-size: 18px;
+  }
+
+  .tech-item p {
+    font-size: 12px;
+  }
+}

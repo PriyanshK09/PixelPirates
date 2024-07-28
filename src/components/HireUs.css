@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&family=Chakra+Petch:wght@400;700&display=swap');
+
+.hire-us {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/src/assets/bg.png') no-repeat center center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hire-us h1 {
+    font-family: "Tiny5", sans-serif;
+    font-size: 60px;
+    color: #00ff00;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+.subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #bbb;
+}
+
+form {
+    max-width: 800px;
+    width: 100%;
+    background: rgba(34, 34, 34, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.2);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 18px;
+    color: #00ff00;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #ffffff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #00cc00;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    background-color: #00cc00;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.3);
+}
+
+.estimate {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: rgba(34, 34, 34, 0.8);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.2);
+}
+
+.estimate h2 {
+    font-size: 28px;
+    color: #00ff00;
+    margin-bottom: 15px;
+}
+
+.estimate p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.estimate p:first-of-type {
+    font-size: 36px;
+    font-weight: bold;
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .hire-us h1 {
+        font-size: 40px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    form {
+        padding: 30px;
+    }
+
+    .form-group label {
+        font-size: 16px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        font-size: 16px;
+    }
+
+    .estimate h2 {
+        font-size: 24px;
+    }
+
+    .estimate p {
+        font-size: 16px;
+    }
+
+    .estimate p:first-of-type {
+        font-size: 28px;
+    }
+}
