@@ -8,9 +8,9 @@ const Footer = () => {
     message: "",
   });
 
-  // const handleChange = (e) => {
-  //   setFormData({ ...formData, [e.target.name]: e.target.value });
-  // };
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   // const handleSubmit = async (e) => {
   //   e.preventDefault();
@@ -68,10 +68,10 @@ const Footer = () => {
         </div>
         <div className="contact-form">
           <h3>Contact Us</h3>
-          <form name="contact" method="POST" netlify>
-            <input type="text" name="name" placeholder="Your Name" required value={formData.name} />
-            <input type="email" name="email" placeholder="Your Email" required value={formData.email} />
-            <textarea name="message" placeholder="Your Message" required value={formData.message} ></textarea>
+          <form method="POST" netlify>
+            <input type="text" name="name" placeholder="Your Name" required value={formData.name} onChange={handleChange} />
+            <input type="email" name="email" placeholder="Your Email" required value={formData.email} onChange={handleChange} />
+            <textarea name="message" placeholder="Your Message" required value={formData.message} onChange={handleChange}></textarea>
             <button type="submit">Send Message</button>
           </form>
         </div>
