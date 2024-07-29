@@ -12,27 +12,27 @@ const Footer = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      if (response.ok) {
-        alert("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        alert("Failed to send message. Please try again.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred. Please try again later.");
-    }
-  };
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const response = await fetch("/api/contact", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(formData),
+  //     });
+  //     if (response.ok) {
+  //       alert("Message sent successfully!");
+  //       setFormData({ name: "", email: "", message: "" });
+  //     } else {
+  //       alert("Failed to send message. Please try again.");
+  //     }
+  //   } catch (error) {
+  //     console.error("Error:", error);
+  //     alert("An error occurred. Please try again later.");
+  //   }
+  // };
 
   return (
     <footer className="footer" id="contact">
@@ -66,12 +66,12 @@ const Footer = () => {
             <li>Fostering a culture of creativity and excellence</li>
           </ul>
         </div>
-        <div className="contact-form" netlify>
+        <div className="contact-form">
           <h3>Contact Us</h3>
-          <form onSubmit={handleSubmit}>
-            <input type="text" name="name" placeholder="Your Name" required value={formData.name} onChange={handleChange} />
-            <input type="email" name="email" placeholder="Your Email" required value={formData.email} onChange={handleChange} />
-            <textarea name="message" placeholder="Your Message" required value={formData.message} onChange={handleChange}></textarea>
+          <form name="contact" method="POST" netlify>
+            <input type="text" name="name" placeholder="Your Name" required value={formData.name} />
+            <input type="email" name="email" placeholder="Your Email" required value={formData.email} />
+            <textarea name="message" placeholder="Your Message" required value={formData.message} ></textarea>
             <button type="submit">Send Message</button>
           </form>
         </div>
