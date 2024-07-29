@@ -11,11 +11,15 @@
 }
 
 .tech-roadmap h2 {
+  font-size: 42px;
+  margin-bottom: 60px;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
   font-family: "Tiny5", sans-serif;
   font-size: 48px;
   color: #00ff00;
   text-align: center;
-  margin-bottom: 40px;
   text-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
   animation: pulse 2s infinite;
 }

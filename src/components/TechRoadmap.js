@@ -22,15 +22,6 @@ const TechRoadmap = () => {
         { name: "Express.js", description: "Web application framework for Node.js" },
         { name: "MongoDB", description: "NoSQL database for modern applications" }
       ]
-    },
-    {
-      year: 2025,
-      technologies: [
-        { name: "AI-Driven Development", description: "AI-assisted coding and testing" },
-        { name: "WebXR", description: "Augmented and virtual reality experiences on the web" },
-        { name: "Quantum Computing APIs", description: "Integration with quantum computing services" },
-        { name: "TypeScript", description: "Typed superset of JavaScript" }
-      ]
     }
   ], []);
   
@@ -48,7 +39,7 @@ const TechRoadmap = () => {
 
   return (
     <div className="tech-roadmap">
-      <h2>Our Technology Roadmap</h2>
+      <h2>Our Technology Stack Roadmap</h2>
       <div className="roadmap-container">
         {roadmapData.map((yearData) => (
           <div 
