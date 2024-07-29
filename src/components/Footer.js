@@ -66,7 +66,7 @@ const Footer = () => {
             <li>Fostering a culture of creativity and excellence</li>
           </ul>
         </div>
-        <div className="contact-form">
+        <div className="contact-form" netlify>
           <h3>Contact Us</h3>
           <form onSubmit={handleSubmit}>
             <input type="text" name="name" placeholder="Your Name" required value={formData.name} onChange={handleChange} />
